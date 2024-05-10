@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+header{
+	display:flex;
+    position: relative;
+    position:fixed;
+    /* background-color: #BDD1BD ; */
+    background-color: rgb(220,220,220);
+    z-index: 1;
+    width:100%;
+    box-shadow: #485163 2px 2px 2px;
+    
+}
+nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+	width: 100%;
+    border-radius: 0 0 15px 0;
+}
+
+.menu a{
+    color: #1747a8 ;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu{
+    width:100%;
+    font-size: x-large;
+    text-align: center;
+}
+.menu:hover a{
+    color:white;
+}
+
+#ppLouis {
+    float: left;
+    position: relative;
+    position: fixed;
+    margin-top: 72px;
+    border-radius: 0 0 20px 0;
+    left:0px;
+    width: 10%;
+}
+
+.barre{
+    border-right: 1px solid black;
+}
+
+.barre2{
+    border-left: 1px solid black;
+    text-align: center;
+}
+
+
+.media:hover .invisible{
+    display:none;
+}
+.media:hover .sous-menu{
+    display: block;
+}
+.sous-menu{
+    display: none; 
+    /* position: absolute;
+    margin-left: 1305px; */
+    /*position : absolute;
+    margin-left: 1305px;
+    border: 1px solid black;
+    display: none; 
+    position: absolute; */
+}
+
+/*#ppLouis {
+    position:absolute;
+    position: fixed;
+    margin-right: 100%;
+}
+
+.title1 {
+    position:absopxlute;
+    position: fixed;
+    color: #c2e3f4;
+    text-align: left;
+    left: 160px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.cursus {
+    position:absolute;
+    position: fixed;
+    text-align: right;
+    right: 0px;
+    color: #c2e3f4;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+}
+.planning {
+    position:absolute;
+    text-align: right;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    color: #c2e3f4;
+    text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
+}*/
+
+@media print{
+    header{
+        display: none;
+    }
+}
+@media screen and (max-width:1200px){
+    .h1_menu{
+        font-size:smaller;
+    }
+}
+@media screen and (max-width:900px){
+    .h1_menu{
+        font-size:small;
+    }
+    img{
+        width: 100px;
+    }
+}
+
+
+
+
+
+
