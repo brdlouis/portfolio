@@ -7,7 +7,6 @@ header{
 	display:flex;
     position: relative;
     position:fixed;
-    /* background-color: #BDD1BD ; */
     background-color: rgb(220,220,220);
     z-index: 1;
     width:100%;
@@ -65,49 +64,7 @@ nav{
 }
 .sous-menu{
     display: none; 
-    /* position: absolute;
-    margin-left: 1305px; */
-    /*position : absolute;
-    margin-left: 1305px;
-    border: 1px solid black;
-    display: none; 
-    position: absolute; */
 }
-
-/*#ppLouis {
-    position:absolute;
-    position: fixed;
-    margin-right: 100%;
-}
-
-.title1 {
-    position:absopxlute;
-    position: fixed;
-    color: #c2e3f4;
-    text-align: left;
-    left: 160px;
-    font-family:'Courier New', Courier, monospace;
-}
-
-.cursus {
-    position:absolute;
-    position: fixed;
-    text-align: right;
-    right: 0px;
-    color: #c2e3f4;
-    text-decoration: none;
-    font-family:'Courier New', Courier, monospace;
-}
-.planning {
-    position:absolute;
-    text-align: right;
-    position: fixed;
-    top: 80px;
-    right: 0px;
-    color: #c2e3f4;
-    text-decoration: none;
-    font-family:'Courier New', Courier, monospace;
-}*/
 
 @media print{
     header{
@@ -127,9 +84,4 @@ nav{
         width: 100px;
     }
 }
-
-
-
-
-
 
