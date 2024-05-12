@@ -1,5 +1,5 @@
 
-.background {
+body {
     /* background-color: #326D6C  ; */
     background-color: rgb(241, 241, 241);
     background-size: 100%;
@@ -26,6 +26,10 @@
     width: 20%;
 }
 
+.ensavoirplus {
+    color: black;
+    text-decoration: none;
+}
 
 .div1{
     text-align: center;
@@ -35,7 +39,7 @@
     font-family: 'Optima', sans-serif;
     margin: 0 150px;
 }
-
+ 
 
 .sectionPres{
     display: flex;
@@ -51,10 +55,6 @@ section {
     margin: 10px;
 }
 
-.article{
-    margin: 10px;
-    background-color: rgb(218, 218, 218);
-}
 
 .liensuites {
     color: white;
@@ -69,7 +69,7 @@ section {
 p{
     font-size: large;
     font-family: serif;
-    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family :'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 .contact{
@@ -106,33 +106,35 @@ p{
 .articleCursus{
     margin: 20px 0px ;
     font-family: 'Times New Roman', Times, serif;
-    text-align: left;  
     background-color: rgb(218, 218, 218);
     border-radius: 4px;
-    width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
     box-shadow: 2px 2px 15px rgba(94, 94, 94, 0.5);
-
+    text-align: left;
+    width: 70%;
 }
 
 .articleCursus div{
     margin-left: 10px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
-
 
 .pCursus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: medium;
     text-align: center;
-    width: 200%;
-    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    font-family :'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 
-/*EXP PRO*/
+/*PROJETS UNIVERSITAIRES*/
 
 .tableExp {
     margin: 20px 10%;
@@ -141,7 +143,6 @@ p{
 .tableExp img {
     width: 90%;
 }
-
 
 th {
     font-size: larger;
@@ -160,7 +161,7 @@ table p {
     padding: 1%;
     border-radius: 4px;
     background-color: rgb(218, 218, 218);
-    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family :'Segoe UI', Tahoma, Verdana, sans-serif;
 
 }
 
@@ -220,6 +221,7 @@ table p {
 .articlePP{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .articlePP p {
@@ -235,7 +237,8 @@ table p {
 .articlePP img {
     border-radius: 15px;
     padding: 10px;
-}
+    width: 100%;
+    height: 100%}
 
 #projPers h2{
     margin-bottom: 20px;
@@ -253,43 +256,74 @@ table p {
 
 /*MEDIA*/
 @media screen and (min-width : 1300px) {
-    #sectionCursus :nth-child(2) {
-        margin-right: 40%;
-    }
-    #sectionCursus :nth-child(3) {
-        margin-left: 40%;
+    .imgCursus{
+        height: 100px;
+        width: 120px;
     }
 }
 
 @media screen and (max-width: 1300px) {
-    .section{
-        padding: 0px 100px;
-        margin: 30px 250px;
-        background-color: red;
+    .articleCursus { 
+        width: 70%;
     }
-    .imgCursus{
-        height: 100px;
+    .articleCursus p {
+        width: 100%;
+    }
+    .contact div{
         width: 120px;
+    }
+    .contact div p {
+        font-size: small;
+    }
+    .tableExp {
+        margin: 0;
+    }
+    #projUni article p{
+        font-size: medium;
+    }
+    #CompQual p {
+        font-size: medium;
+    }
+    .comppgauche { 
+        margin-left: -70px ;
+        width: 130%;
+    }
+    .articlePP p {
+        font-size: medium;
+    }
+    #projPers {
+        margin: 0px;
+        width: 100%;
     }
 }
-@media screen and (max-width: 1200px) {
-    .section{
-        padding: 0px 100px;
-        margin: 30px 150px;
-    }
+
+
+@media screen and (max-width: 1100px) {
+    
     .imgCursus{
         height: 100px;
         width: 120px;
     }
+    .articleCursus { 
+        width: 100%;
+    }
+    .articleCursus img {
+        width: 30%;
+        height: 30%;
+    }
+    .articleCursus p {
+        font-size: small;
+    }
+
 }
-@media screen and (max-width: 900px) {
-    .section{
-        padding: 0px 100px;
-        margin: 30px 50px;
+
+@media screen and (max-width: 1000px) {w
+    .comppgauche {
+        width: 200%;
+        margin-left: -100px;
     }
-    .imgCursus{
-        height: 100px;
-        width: 120px;
+    .descriptionJauge {
+        width: 100%;
     }
 }
 
