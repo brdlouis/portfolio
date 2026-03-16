@@ -1,0 +1,145 @@
+---
+import { Image } from "astro:assets";
+import ppLouis from '../assets/ppLouis.jpg';
+import imgIUT from '../assets/imgIUT.jpg';
+import imgMonnet from '../assets/imgMonnet.jpg';
+---
+
+<div>
+    <div class="flex h-100 w-full p-4">
+        <Image src={ppLouis} alt="Mon portrait" class="w-auto object-cover rounded-xl"/>
+        <div class="flex-1 p-4 text-black items-center">
+            <p class="text-[8cqw] font-serif tracking-[20px] text-center text-white">Louis Bordes</p>
+            <p class="text-[4cqw] font-display tracking-[5px] text-center text-white">3ème année BUT informatique en alternance</p>
+        </div>
+    </div>
+    <section class="w-full flex justify-center">
+        <p class="w-7/10 text-center text-4xl text-white">Étudiant à l’IUT d’Aubière (63), et en alternance chez Agedi depuis 2 ans, dans le domaine du développement d'application web, j’aimerai continuer d’apprendre l’informatique en école d’ingénieur. </br>Je sais me montrer polyvalant, créatif et persévérant. </p>
+    </section>
+    <div class="flex place-content-around">
+        <div class="divCursus">
+            <Image src={imgIUT} alt="image de l'IUT d'Aubière" class="imgCursus"/>
+            <div class="filterCursus"></div>
+            <div class="txtCursus">
+                <a href="https://iut.uca.fr/formations/but-informatique-clermont" class="text-center text-white font-bold text-xl">IUT d’Aubière <br/>2023 - aujourd’hui </a>
+            </div>
+        </div>
+        <div class="divCursus">
+            <Image src={imgMonnet} alt="image du lycée Monnet" class="imgCursus"/>
+            <div class="filterCursus"></div>
+            <div class="txtCursus">
+                <a href="https://monnet-mermoz-aurillac.ent.auvergnerhonealpes.fr" class="text-center text-white font-bold text-xl">Lycée Monnet Mermoz 2020 - 2023 <br/> Bac général maths. physique-chimie maths. expertes</a>
+            </div>
+        </div>
+    </div>
+    <section>
+        <p class="sectionTitle">Qualités</p>
+        <div class="caroussel">
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Persévérance</p>
+                <p class="paragraph">Mon côté sportif fait de moi quelqu’un qui apprécie donner de son mieux. J’ai envie de progresser dans tout ce que je fais comme dans le travail et ainsi ne pas lâcher dans les tâches difficiles. Pour moi, un développeur a souvent besoin de persévérer, que ce soit lors de l’analyse d’un bug, ou dans toutes les situations de reflexion algorithmique.</p>
+            </div>
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Polyvalence</p>
+                <p class="paragraph middleSlide">J’adore découvrir de nouvelles musiques et de nouveaux sports, surtout quand il y a de l’enjeu. De ce fait, je pratique le football depuis plus de 12 ans, et j'y ai découvert la nécessité d'être polyvalent. C’est une qualité principale pour un développeur full stack. Chez moi, elle est liée à la curiosité, car je me sens intéressé par ce qui m'entoure, et donc deviens polyvalent. Je me sens capable de me diversifier dans les tâches de groupe ou dans le travail à faire en entreprise.</p>
+            </div>
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Créativité</p>
+                <p class="paragraph">Cette curiosité a aussi fait de moi quelqu’un de créatif. En effet, j’ai de l’imagination et je m’en rend compte dans différents domaines, comme les jeux de stratégies, la musique et surtout dans les travaux à réaliser au BUT et en entreprise. J’arrive à trouver diverses solutions face à un problème qui a lieu dans du code, ou dans tout autre exercice.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p class="sectionTitle">Compétences</p>
+        <div class="caroussel">
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Mathématiques</p>
+                <p class="paragraph">
+                    J’ai des fondamentaux mathématiques que je souhaite désormais mobiliser dans un cadre d'ingénierie. 
+                    Je pense là aux mathématiques discrètes avec l’algorithmique et la théorie des graphes, qui peuvent servir à une optimisation logistique par exemple,
+                     ou encore aux mathématiques appliquées avec les statistiques et probabilités, utiles pour une application de contrôle qualité/fiabilité. 
+                    L’algèbre linéaire fait aussi partie des domaines mathématiques que j’aurais le plaisir de mettre en œuvre en tant qu’ingénieur, 
+                    en travaillant sur du traitement d’image ou le fonctionnement de réseaux de neurones par exemple.
+                </p>
+            </div>
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Analyse d’impact et maîtrise des architectures complexes</p>
+                <p class="paragraph middleSlide">Ma mission ne se limite pas à la résolution de bugs ou à l'ajout de fonctionnalités ; 
+                    elle nécessite une analyse d'impact rigoureuse avant chaque intervention. 
+                    J'ai appris à garantir la cohérence globale du système en veillant à ce qu'une modification 
+                    — qu'elle soit visuelle (Front-end) ou structurelle (Back-end : entités, services, BDD) — 
+                    n'entraîne aucune régression ou répercussion imprévue sur le reste de l'écosystème. 
+                    <br/>Mon expérience en alternance sur une application de gestion financière me permet de développer une expertise dans l'appréhension d'architectures complexes. 
+                    Évoluer au sein d'une structure comprenant des centaines de fichiers m’apprend l'importance de la rigueur organisationnelle et du respect des patterns de conception. 
+                    <br/>Cette capacité à naviguer dans la complexité tout en respectant l'intégrité architecturale est pour moi une compétence fondamentale du métier d'ingénieur.
+                    <br/><i>Le travail réalisé en entreprise et les ... que j'en ai tiré sont présentés dans la section 'Mon Alternance'.</i>
+                </p>
+            </div>
+            <div class="contentCaroussel">
+                <p class="titleCaroussel">Travail en équipe</p>
+                <p class="paragraph">Le cursus du BUT vise à mettre en avant le travail d’équipe. C’est l’une des plus importantes compétences acquises en BUT 
+                    car j’ai travaillé dans de nombreux projets collectifs. Tout au long des 3 années ont lieu des projets de 2 à 5 personnes liant développement, 
+                    études de besoin client, gestion de projet en équipe, ou encore étude de marché, sous la forme de Situations d’Apprentissage Évaluées (SAÉ). 
+                    J’ai appris de ces projets que la répartition des tâches comme un pilier du développement logiciel : 
+                    savoir s'adapter aux forces de chacun et placer la communication au cœur des échanges constituent, à mon sens, les leviers essentiels d'une intégration professionnelle réussie.
+                    <br/><i>Vous trouverez des exemples concrets de ces dynamiques dans la section 'Mes Projets'.</i>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p class="sectionTitle">Nuage de tech</p>
+    </section>
+</div>
+
+<style>
+    @reference "tailwindcss";
+    .divCursus {
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .imgCursus {
+        width: 20rem;
+        height: 10rem;
+        object-fit: cover;
+    }
+    .filterCursus {
+        position: absolute;
+        width: 20rem;
+        height: 10rem;
+        background-color: #F58E4180;
+    
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .txtCursus {
+        @apply absolute inset-0 flex items-center justify-center items-center;
+    }
+    .caroussel {
+        @apply flex snap-x overflow-x-auto snap-mandatory;
+        scrollbar-width: none;
+    }
+    .contentCaroussel {
+        @apply snap-center flex-shrink-0 items-center;
+        width: 40rem;
+        margin: 0 2rem;
+    }
+    .titleCaroussel {
+        @apply text-2xl font-bold text-center text-white;
+    }
+    
+</style>
+
+<script>
+  const elementsACentrer = document.querySelectorAll('.middleSlide');
+  
+  elementsACentrer.forEach((slide) => {
+    slide.scrollIntoView({
+      behavior: 'auto',
+      inline: 'center'
+    });
+  });
+</script>

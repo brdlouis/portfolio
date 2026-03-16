@@ -1,0 +1,110 @@
+---
+import { Image } from "astro:assets";
+---
+<section>
+    <p class="sectionTitle">Mes projets</p>
+    <div class="flex-col mx-[10%]">
+        <div class="flex mb-20 gap-5">
+            <div class="w-2/5">
+                <div class="h-1/2">
+                    <a href="/Presentation_SAE3A_Maestro.pdf" target="_blank">
+                        <object
+                            data="/Presentation_SAE3A_Maestro.pdf"
+                            type="application/pdf"
+                            class="h-[90%]"
+                        >
+                            <p>Votre navigateur ne peut pas afficher ce PDF. 
+                                <a href="/Presentation_SAE3A_Maestro.pdf" class="text-blue-400 underline">Cliquez ici pour le télécharger.</a>
+                            </p>
+                        </object>
+                    </a>
+                    <p class="text-lg text-white text-center h-[10%]">Présentation initiale du projet</p>
+                </div>
+                <div class="h-1/2">
+                    <a href="/support_presentation_Maestro_fev.pdf" target="_blank">
+                        <object
+                            data="/support_presentation_Maestro_fev.pdf"
+                            type="application/pdf"
+                            class="h-full h-[90%]"
+                        >
+                            <p>Votre navigateur ne peut pas afficher ce PDF. 
+                                <a href="/support_presentation_Maestro_fev.pdf" class="text-blue-400 underline">Cliquez ici pour le télécharger.</a>
+                            </p>
+                        </object>
+                    </a>
+                    <p class="text-lg text-white text-center h-[10%]">Support de présentation de gestion de projet</p>
+                </div>
+            </div>
+            <div class="">
+                <p class="projetTitle">Maestro</p>
+                <p class="paragraph">
+                    Maestro est le projet de SAÉ qui dure toute la 3ème année. Ayant le libre choix du sujet, nous nous sommes lancés, avec 4 camarades, dans le développement d'une application de streaming musical. 
+                    Notre application est similaire aux classiques Spotify et Deezer, notre objectif ici est purement technique.
+                    C'est un vrai test pour nous à la fin de BUT, car il mobilise de nombreuses compétences acquises au cours de la formation : 
+                    <br/>- Nous avons pris du temps pour définir les limites de notre application avec notre professeur référant (analyse du besoin client et conception).
+                    <br/>- Nous tenons à jour des indicateurs d'avancement que nous présentons régulièrement à une enseignante jouant le rôle d'un employeur qui veille sur le bon fonctionnement de son équipe de développement (gestion de projet).
+                    <br/>- Nos capacités techniques de développement sont évidemment mises à l'épreuve. Nous avons choisi de développer en utilisant le framework de PHP Symfony, car c'est le langage que nous apprenions lors du lancement du projet.  
+                    développement logiciel web évidemment, déploiement, utilisation et optimisation de base de données, 
+                </p>
+            </div>
+        </div>
+        <div class="flex">
+             <div class="mr-5">
+                <p class="projetTitle">Intelligence Artifielle</p>
+                <p class="paragraph">
+                    Lors de la 3ème année de BUT toujours, nous avons eu à réaliser un projet de développement d'un modèle d'intelligence artificielle, par 2.
+                    Pour rester dans la thématique musicale, nous avons choisi de développer une intelligence capable de prédire un style musical, en se basant sur les caractéristique d'une musique.
+                    Voici ci-contre le support de la présentation finale du projet.
+                    Ce dernier nous a permis d'avoir une première approche du fonctionnement de la technologie la plus en vogue du moment.
+                </p>
+            </div>
+            <div class="w-2/5">
+                <a href="/presentation_projet_IA.pdf" target="_blank">
+                    <object
+                        data="/presentation_projet_IA.pdf"
+                        type="application/pdf"
+                        class="h-[400px]"
+                    >
+                        <p>Votre navigateur ne peut pas afficher ce PDF. 
+                            <a href="/presentation_projet_IA.pdf" class="text-blue-400 underline">Cliquez ici pour le télécharger.</a>
+                        </p>
+                    </object>
+                </a>
+                <p class="text-lg text-white text-center">Présentation initiale du projet</p>
+            </div>
+        </div>
+        <div class="flex mb-20 gap-5">
+            <div class="w-2/5">
+                <a href="/Contexte_SQLuedo.pdf" target="_blank">
+                    <object
+                        data="/Contexte_SQLuedo.pdf"
+                        type="application/pdf"
+                        class="h-full h-[90%]"
+                    >
+                        <p>Votre navigateur ne peut pas afficher ce PDF. 
+                            <a href="/Contexte_SQLuedo.pdf" class="text-blue-400 underline">Cliquez ici pour le télécharger.</a>
+                        </p>
+                    </object>
+                </a>
+                <p class="text-lg text-white text-center h-[10%]">Contexte des applications</p>
+            </div>
+            <div class="">
+                <p class="projetTitle">SQLuedo</p>
+                <p class="paragraph">
+                    SQLuedo est le projet de 2ᵉ année de BUT. Nous devions réaliser, par groupe de 5, une application web et une mobile, qui permettent à un public scolaire de jouer avec les requêtes SQL afin de résoudre des enquêtes.                
+                    <br/>L'objectif était de réaliser deux applications, en PHP et en Kotlin Android, reliées par une API à une base de données en ligne. Aussi, ce projet nous a demandé de nous impliquer dans la gestion de projet, avec un suivi des indicateurs de coût, de temps et de qualité, et dans la gestion d'équipe.
+                    <br/>Nous avons donc développé l'application web en 4 mois en utilisant le modèle MVC (modèle-vue-contrôleur). L'application Android s'est faite par la suite, en un peu moins de 3 mois, utilisant Kotlin Compose. Mes camarades et moi avons découvert les concepts et les principes de développement d'une API REST.
+                    <br/>Dûes aux consignes, nous avons évalué nos compétences de gestion de projet et de travail d'équipe en réalisant une soutenance finale et trois livrables sur notre avancement et nos outils utilisés.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @reference "tailwindcss";
+
+    .projetTitle {
+        @apply text-xl font-bold text-white;
+    }
+</style>    
