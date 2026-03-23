@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import background from '../assets/background.jpg';
-
+import ppLouis from '../assets/ppLouis.jpg';
 ---
 
 <!doctype html>
@@ -9,17 +9,27 @@ import background from '../assets/background.jpg';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="ppLouis" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body class=> {/*style={{ backgroundImage: `url(${background.src})` }} class="bg-cover bg-fixed"*/}
+	<body> {/*style={{ backgroundImage: `url(${background.src})` }} class="bg-cover bg-fixed"*/}
+		<nav class="sticky top-0 h-30 bg-black w-full z-50 flex items-center">
+			<a href="#Hero" class="navText">Moi</a>
+			<a href="#Alternance" class="navText">Mon alternance</a>
+			<a href="#Projets" class="navText">Mes projets</a>
+			<a href="/portfolio/CV_Louis_Bordes.pdf" target="_blank" class="navText">Mon CV</a>
+		</nav>
 		<slot />
 	</body>
 </html>
 
 <style>
+	@reference "tailwindcss";
+
 	html,
 	
 	body {
@@ -35,5 +45,9 @@ import background from '../assets/background.jpg';
 		left: 0;
 		width: 100%;
 		z-index: -1;
+	}
+
+	.navText {
+		@apply w-1/4 text-center text-4xl text-white font-bold hover:text-blue-400 font-serif ;
 	}
 </style>

@@ -5,7 +5,7 @@ import imgIUT from '../assets/imgIUT.jpg';
 import imgMonnet from '../assets/imgMonnet.jpg';
 ---
 
-<div>
+<div id="Hero">
     <div class="flex h-100 w-full p-4">
         <Image src={ppLouis} alt="Mon portrait" class="w-auto object-cover rounded-xl"/>
         <div class="flex-1 p-4 text-black items-center">
@@ -16,7 +16,7 @@ import imgMonnet from '../assets/imgMonnet.jpg';
     <section class="w-full flex justify-center">
         <p class="w-7/10 text-center text-4xl text-white">Étudiant à l’IUT d’Aubière (63), et en alternance chez Agedi depuis 2 ans, dans le domaine du développement d'application web, j’aimerai continuer d’apprendre l’informatique en école d’ingénieur. </br>Je sais me montrer polyvalant, créatif et persévérant. </p>
     </section>
-    <div class="flex place-content-around">
+    <div class="flex place-content-around" id="Cursus">
         <div class="divCursus">
             <Image src={imgIUT} alt="image de l'IUT d'Aubière" class="imgCursus"/>
             <div class="filterCursus"></div>
@@ -32,7 +32,7 @@ import imgMonnet from '../assets/imgMonnet.jpg';
             </div>
         </div>
     </div>
-    <section>
+    <section id="Qualites">
         <p class="sectionTitle">Qualités</p>
         <div class="caroussel">
             <div class="contentCaroussel">
@@ -49,7 +49,7 @@ import imgMonnet from '../assets/imgMonnet.jpg';
             </div>
         </div>
     </section>
-    <section>
+    <section id="Competences">
         <p class="sectionTitle">Compétences</p>
         <div class="caroussel">
             <div class="contentCaroussel">
@@ -97,7 +97,6 @@ import imgMonnet from '../assets/imgMonnet.jpg';
     .divCursus {
         position: relative;
         overflow: hidden;
-        
     }
     .imgCursus {
         width: 20rem;

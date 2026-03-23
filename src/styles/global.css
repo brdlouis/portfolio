@@ -3,6 +3,7 @@
 @theme {
   --font-serif: "Instrument Serif", serif;
   --font-display: "Instrument Serif", serif;
+  --font-instrument-sans: "Instrument Sans";
 }
 
 @font-face {
@@ -13,14 +14,27 @@
   font-display: swap;
 }
 
+@font-face {
+  font-display: swap;
+  font-family: 'Instrument Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/instrument-sans-v4-latin-regular.woff2') format('woff2');
+}
+
 .paragraph {
-  @apply text-lg text-white text-justify;
+  @apply text-lg text-white text-justify leading-relaxed font-instrument-sans;
 }
 
 section {
-  @apply pt-20 pb-20;
+  @apply pt-20 pb-20 ;
 }
 
 .sectionTitle {
-  @apply text-center pb-20 text-3xl text-white;
+  @apply text-center pb-20 text-3xl text-white font-serif;
+}
+
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth;
 }
