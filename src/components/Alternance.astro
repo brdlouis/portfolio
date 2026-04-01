@@ -1,11 +1,39 @@
+---
+const images = [
+    { src: '/src/assets/logo/logo_angularJS.png', alt: 'Logo AngularJS' },
+    { src: '/src/assets/logo/logo_java.png', alt: 'Logo Java' },
+    { src: '/src/assets/logo/logo_jira.png', alt: 'Logo Jira' },
+    { src: '/src/assets/logo/logo_jasper.png', alt: 'Logo Jasper' },
+    { src: '/src/assets/logo/logo_docker.png', alt: 'Logo Docker' },
+    { src: '/src/assets/logo/logo_flyway.png', alt: 'Logo Flyway' },
+    { src: '/src/assets/logo/logo_devexpress.png', alt: 'Logo DevExpress' },
+];
+---
 <section id="Alternance">
     <p class="sectionTitle">Mon alternance</p>
-    <div class="flex pl-40 pr-40 gap-10">
+    <div class="flex mx-[10%] gap-10">
         <div class="w-3/5">
             <p class="paragraph">
                 J'effectue ma 2ᵉ et 3ᵉ année de BUT en alternance chez AGEDI, un syndicat mixte spécialisée dans le développement de site web de gestion pour les collectivités territoriales, à Aurillac (15). 
                 Je participe à la maintenance et à l’implémentation de nouvelles fonctionnalités de l'application comptable de la gamme PROXIMA. 
                 Ce cursus me permet de découvrir le monde de l'entreprise, les technologies associées, tout en gagnant en expérience grâce à un apprentissage complémentaire à la formation scolaire.
+            </p>
+            <div class="scroller" data-direction="left" data-speed="slow">
+                <div class="scroller__inner">
+                    {images.map((img) => (
+                        <img src={img.src} alt={img.alt} />
+                    ))}
+                    
+                    {images.map((img) => (
+                        <img src={img.src} alt={img.alt} aria-hidden="true" />
+                    ))}
+                </div>
+            </div>
+            <p class="paragraph">
+                Vous trouverez dans mon rapport ci-contre les détails de mon travail réalisé,
+                suivis d'une présentation du syndicat Agedi, 
+                du sujet de mon alternance et de l’application développée, des objectifs fixés, et de la gestion de projet mise en oeuvre.
+                Y sont aussi décrites mes compétences dans certains outils que j'utilise au quotidien, et les connaissances acquises.
             </p>
         </div>
         <div class="w-2/5 h-[500px]">

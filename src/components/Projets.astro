@@ -1,12 +1,19 @@
 ---
 import { Image } from "astro:assets";
+const images = [
+    { src: '/src/assets/logo/logo_mariadb.webp', alt: 'Logo MariaDB' },
+    { src: '/src/assets/logo/logo_symfony.webp', alt: 'Logo Symfony' },
+    { src: '/src/assets/logo/logo_js.webp', alt: 'Logo JavaScript' },
+    { src: '/src/assets/logo/logo_php.png', alt: 'Logo PHP' },
+    { src: '/src/assets/logo/logo_msproject.png', alt: 'Logo MS Project' },
+];
 ---
 <section id="Projets">
     <p class="sectionTitle">Mes projets</p>
     <div class="flex-col mx-[10%]">
-        <div class="flex mb-20 gap-5 h-[400px] items-center" id="Maestro">
+        <div class="flex mb-20 gap-5 items-center h-full" id="Maestro">
             <div class="w-2/5 h-full">
-                <div class="h-1/2 pb-2">
+                <div class="mb-2]">
                     <a href="/portfolio/Presentation_SAE3A_Maestro.pdf" target="_blank">
                         <object
                             data="/portfolio/Presentation_SAE3A_Maestro.pdf"
@@ -18,9 +25,9 @@ import { Image } from "astro:assets";
                             </p>
                         </object>
                     </a>
-                    <p class="text-lg text-white text-center h-[10%]">Présentation initiale du projet</p>
+                    <p class="text-lg text-white text-center">Présentation initiale du projet</p>
                 </div>
-                <div class="h-1/2">
+                <div class="">
                     <a href="/portfolio/support_presentation_Maestro_fev.pdf" target="_blank">
                         <object
                             data="/portfolio/support_presentation_Maestro_fev.pdf"
@@ -40,6 +47,19 @@ import { Image } from "astro:assets";
                 <p class="paragraph">
                     Maestro est le projet de SAÉ qui dure toute la 3ème année. Ayant le libre choix du sujet, nous nous sommes lancés, avec 4 camarades, dans le développement d'une application de streaming musical. 
                     Notre application est similaire aux classiques Spotify et Deezer, notre objectif ici est purement technique.
+                </p>
+                <div class="scroller" data-direction="left" data-speed="slow">
+                    <div class="scroller__inner">
+                        {images.map((img) => (
+                            <img src={img.src} alt={img.alt} />
+                        ))}
+                        
+                        {images.map((img) => (
+                            <img src={img.src} alt={img.alt} aria-hidden="true" />
+                        ))}
+                    </div>
+                </div>
+                <p class="paragraph">
                     C'est un vrai test pour nous à la fin de BUT, car il mobilise de nombreuses compétences acquises au cours de la formation : 
                     <br/>- Nous avons pris du temps pour définir les limites de notre application avec notre professeur référant (analyse du besoin client et conception).
                     <br/>- Nous tenons à jour des indicateurs d'avancement que nous présentons régulièrement à une enseignante jouant le rôle d'un employeur qui veille sur le bon fonctionnement de son équipe de développement (gestion de projet).
@@ -48,11 +68,11 @@ import { Image } from "astro:assets";
                 </p>
             </div>
         </div>
-        <div class="flex h-[400px] items-center" id="ProjetIA">
-             <div class="mr-5">
+        <div class="flex h-[400px] mb-20 items-center" id="ProjetIA">
+            <div class="mr-5">
                 <p class="projetTitle text-right">Intelligence Artifielle</p>
                 <p class="paragraph">
-                    Lors de la 3ème année de BUT toujours, nous avons eu à réaliser un projet de développement d'un modèle d'intelligence artificielle, par 2.
+                    Lors de la 3ème année de BUT toujours, j'ai eu à réaliser un projet de développement d'un modèle d'intelligence artificielle, en groupe de 2.
                     Pour rester dans la thématique musicale, nous avons choisi de développer une intelligence capable de prédire un style musical, en se basant sur les caractéristique d'une musique.
                     Voici ci-contre le support de la présentation finale du projet.
                     Ce dernier nous a permis d'avoir une première approche du fonctionnement de la technologie la plus en vogue du moment.
