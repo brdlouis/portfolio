@@ -72,7 +72,7 @@ import imgMonnet from '../assets/imgMonnet.jpg';
                     <br/>Mon expérience en alternance sur une application de gestion financière me permet de développer une expertise dans l'appréhension d'architectures complexes. 
                     Évoluer au sein d'une structure comprenant des milliers de fichiers m’apprend l'importance de la rigueur organisationnelle et du respect des patterns de conception. 
                     <br/>Cette capacité à naviguer dans la complexité tout en respectant l'intégrité architecturale est pour moi une compétence fondamentale du métier d'ingénieur.
-                    <br/><i>Le travail réalisé en entreprise et l'expérience que j'en ai tiré sont présentés dans la section 'Mon Alternance'.</i>
+                    <br/><i>Le travail réalisé en entreprise et l'expérience que j'en ai tirée sont présentés dans la section 'Mon Alternance'.</i>
                 </p>
             </div>
             <div class="contentCaroussel">
@@ -130,12 +130,17 @@ import imgMonnet from '../assets/imgMonnet.jpg';
 </style>
 
 <script>
-  const elementsACentrer = document.querySelectorAll('.middleSlide');
-  
-  elementsACentrer.forEach((slide) => {
-    slide.scrollIntoView({
-      behavior: 'auto',
-      inline: 'center'
+  window.addEventListener('load', () => {
+    const caroussels = document.querySelectorAll('.caroussel');
+    caroussels.forEach((caroussel) => {
+      const cible = caroussel.querySelector('.middleSlide')?.closest('.contentCaroussel');
+      if (cible) {
+        const centerPosition = cible.offsetLeft - (caroussel.offsetWidth / 2) + (cible.offsetWidth / 2);
+        caroussel.scrollTo({
+          left: centerPosition,
+          behavior: 'instant'
+        });
+      }
     });
   });
 </script>
