@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #0d1128; /* Base très sombre pour faire ressortir les couleurs */
+  
+  /* Disposition aléatoire des taches de couleurs (bleu, violet, blanc) */
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(65, 88, 208, 0.9) 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(155, 81, 224, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(138, 43, 226, 0.8) 0%, transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(74, 144, 226, 0.9) 0%, transparent 40%);
+  
+  /* Étire le fond sur 2 fois la hauteur de l'écran pour qu'il déroule au scroll */
+  background-size: 100vw 200vh; 
+  background-repeat: repeat-y;
+  position: relative;
+  z-index: 0;
+}
+
+/* Calque fixe qui applique le flou sans contours sur le fond qui défile */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Reste sous le texte et les bulles */
+  backdrop-filter: blur(80px);         /* Crée le flou abstrait */
+  -webkit-backdrop-filter: blur(80px); /* Compatibilité Safari */
+  pointer-events: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar a {
+  font-family : 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h1, h2, h3 {
+  font-family : 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- DISPOSITION DE L'EN-TÊTE (HERO) --- */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Espace entre la photo et le texte */
+  margin-bottom: 40px;
+}
+
+.hero-photo {
+  flex: 0 0 200px; /* Fixe la largeur de la zone photo */
+}
+
+.hero-content {
+  flex: 1; /* Prend tout l'espace restant à droite */
+}
+
+/* On retire l'espacement standard du H1 car il est dans le flexbox */
+.hero-content h1 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  text-align: center; 
+}
+
+.profile-pic {
+  width: 100%;
+  display: block;
+  /* Crée une forme organique irrégulière */
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  /* Anime la forme lentement */
+  animation: morph 8s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+@keyframes morph {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+/* --- LA BULLE DE VERRE --- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(12px);           
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 20px;                   
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); 
+  margin-bottom: 30px;
+}
+
+/* Ajustement spécifique pour la bulle dans l'en-tête */
+.hero-content .glass-panel {
+  margin-bottom: 0; 
+}
+
+.glass-panel p {
+  line-height: 1.8;
+  font-size: 1.25rem;                    
+  text-align: justify;                   
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.glass-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- DISPOSITION CÔTE À CÔTE (TEXTE + PDF A4) --- */
+.split-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center; 
+}
+
+.split-layout .text-content {
+  flex: 1; 
+}
+
+.split-layout .media-content {
+  flex: 0 0 320px; 
+}
+
+/* --- HARMONISATION DES PDF ET VIDEOS --- */
+.pdf-viewer-a4 {
+    display: block;
+    width: 100%;
+    height: 452px; 
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+}
+
+.pdf-viewer-slides {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9; 
+    height: auto;         
+    margin: 40px auto 0 auto; 
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background: transparent;
+}
+
+.video-viewer {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    margin: 40px auto 0 auto;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* --- CARROUSEL DÉFILANT (GAUCHE VERS DROITE) --- */
+.logo-carousel {
+  overflow: hidden; /* Masque ce qui dépasse de la bulle */
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.1);  
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 40px 0; /* Plus de padding latéral pour que les images sortent de l'écran proprement */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  position: relative;
+}
+
+/* Le rail qui contient les images et qui s'anime */
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;           /* Espace régulier entre les logos */
+  width: max-content;  /* Le rail s'adapte à la largeur totale des 16 logos */
+  
+  /* L'animation : 25s pour un effet doux, linear pour une vitesse constante, infinite pour la boucle */
+  animation: scrollLeftToRight 25s linear infinite; 
+}
+
+/* Met l'animation en pause si la souris passe sur le carrousel */
+.logo-carousel:hover .logo-track {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeftToRight {
+  0% {
+    /* Commence décalé sur la gauche (sur la série dupliquée) */
+    transform: translateX(calc(-50% - 25px)); 
+  }
+  100% {
+    /* Revient à la position 0 (série originale) */
+    transform: translateX(0);
+  }
+}
+
+.logo-track img {
+  height: 60px; 
+  flex-shrink: 0; /* Empêche les images de s'écraser */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.logo-track img:hover {
+    transform: scale(1.2) translateY(-5px);
+    filter: drop-shadow(0 8px 12px rgba(0,0,0,0.2));
+}
+
+/* --- RESPONSIVE DESIGN (Mobiles et petites tablettes) --- */
+@media (max-width: 850px) {
+  .hero-layout {
+    flex-direction: column;
+  }
+  .hero-photo {
+    flex: 0 0 auto;
+    width: 200px;
+  }
+  .split-layout {
+    flex-direction: column; 
+  }
+  .split-layout .media-content {
+    flex: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .pdf-viewer-a4 {
+    height: 565px; 
+  }
+}
+
+/* --- DISPOSITION DU PARCOURS (IMAGES À GAUCHE) --- */
+.parcours-item {
+  display: flex;
+  align-items: center; /* Centre le texte verticalement par rapport à l'image */
+  gap: 30px;           /* Espace entre l'image et le texte */
+  margin-bottom: 30px; /* Espace entre les différentes écoles */
+}
+
+.parcours-item:last-child {
+  margin-bottom: 0;    /* Retire la marge en bas du dernier élément pour rester esthétique */
+}
+
+.parcours-img {
+  width: 150px;
+  flex-shrink: 0;      /* Empêche l'image de se rétrécir si le texte est long */
+  margin: 0 !important; /* Écrase la règle globale (margin: 30px auto) qui forçait l'image au centre */
+  border-radius: 12px;
+}
+
+/* Responsive pour mobile : on repasse l'image au-dessus du texte sur les petits écrans */
+@media (max-width: 600px) {
+  .parcours-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .parcours-img {
+    margin: 0 auto 15px auto !important;
+  }
+}
